@@ -1,28 +1,25 @@
 import java.util.*;
-<<<<<<< HEAD
-//UC-1 Ckeck Attendance
-class EmpWageComputationUc1{
-=======
-//UC-2 daily wage
+//UC-3 add part time
 
-class EmpWageComputationUc2{
->>>>>>> UC-2/Dailywage
+class EmpWageComputationUc3{
    public static void main(String[] args)throws Exception{
       int wage_per_hr=20;
       int full_day_hr=8;
+      int half_day_hr=4;
       System.out.println("Welcome to Employee wage computation program");
       double attCheck=Math.random();
       if(attCheck>0.5){
-         System.out.println("Employee is present");
-<<<<<<< HEAD
+         double category=Math.random();
+         if (category>0.5){
+            System.out.println("Employee is present and is a full time");
+            System.out.println("daily_wage="+(wage_per_hr*full_day_hr));
+         }else{
+            System.out.println("Employee is present and is a part time");
+            System.out.println("daily_wage="+(wage_per_hr*half_day_hr));
+         }
       }else{
          System.out.println("Employee is absent");
-=======
-         System.out.println("daily_wage="+(wage_per_hr*full_day_hr))";
-      }else{
-         System.out.println("Employee is absent");
-         System.out.println("daily_wage="+(wage_per_hr*0))";
->>>>>>> UC-2/Dailywage
+         System.out.println("daily_wage="+(wage_per_hr*0));
       }
    }
 }
