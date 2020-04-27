@@ -1,5 +1,5 @@
 import java.util.*;
-//UC-5 wage of a month
+//UC-6 Calculate Wages till a condition of total working hours or days is reached for a month
 
 class EmpWageComputationUc3{
    public static void main(String[] args)throws Exception{
@@ -12,8 +12,10 @@ class EmpWageComputationUc3{
       int total_work_day=20;
       int total_wage=0;
       int daily_wage=0;
+      int work_hrs=0
+      int total_work_hrs=100;
       System.out.println("Welcome to Employee wage computation program");
-      while(day_count<total_work_day){
+      while(day_count<total_work_day && work_hrs<total_work_hrs){
          double attCheck=Math.random();
          if(attCheck>0.5){
             emp_status="present";
@@ -34,6 +36,7 @@ class EmpWageComputationUc3{
                         daily_wage=(wage_per_hr*full_day_hr);
                         System.out.println("daily_wage="+daily_wage);
                         total_wage=(total_wage+daily_wage);
+                        work_hrs=work_hrs+8;
                         day_count++;
                         break;
                      case "part_time":
@@ -41,6 +44,7 @@ class EmpWageComputationUc3{
                         daily_wage=(wage_per_hr*full_day_hr);
                         System.out.println("daily_wage="+daily_wage);
                         total_wage=(total_wage+daily_wage);
+                        work_hrs=work_hrs+4;
                         day_count++;
                         break;
                   }
@@ -52,5 +56,6 @@ class EmpWageComputationUc3{
          }//switch
       }//while
       System.out.println("monthly_wage="+total_wage);
+      System.out.println("total_work_hrs="+work_hrs);
    }//main
 }//class
