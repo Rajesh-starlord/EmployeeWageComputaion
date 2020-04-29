@@ -1,10 +1,10 @@
 //Employee Class
 class Employee{
 	
-	public final int wage_per_hr=20;
+    public final int wage_per_hr=20;
     public final int full_day_hr=8;
     public final int half_day_hr=4;
-	public final int total_work_day=20;
+    public final int total_work_day=20;
     public final int total_work_hrs=100;
 	
 	String emp_status="";
