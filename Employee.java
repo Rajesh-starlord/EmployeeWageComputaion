@@ -1,4 +1,4 @@
-//Employee Util Class
+//Employee Class
 class Employee{
 	
 	public final int wage_per_hr=20;
@@ -15,7 +15,7 @@ class Employee{
     int work_hrs=0;
 	
 	//function to check attendance of employee
-	String isPresent(){
+	private String isPresent(){
 		double attCheck=Math.random();
         if(attCheck>0.5){
            return "present";
@@ -25,7 +25,7 @@ class Employee{
 		
 	}
 	//function to check the type(full-time/part-time) of employee
-	String empType(){
+	private String empType(){
 		double category=Math.random();
             if (category>0.5){
 				return "full_time";
@@ -33,12 +33,12 @@ class Employee{
                 return "part_time";
             }
 	}
-	void print(int totalwage, int workhrs){
+	private void print(int totalwage, int workhrs){
 		System.out.println("monthly_wage="+totalwage);
         System.out.println("total_work_hrs="+workhrs);
 	}
 	//calculate monthly salary of an employee 
-	void empWage(){
+	public void empWage(){
 		while(day_count<total_work_day && work_hrs<total_work_hrs){
 			emp_status=isPresent();//check emp is present or absent
 			 switch(emp_status){
