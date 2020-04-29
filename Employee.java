@@ -55,7 +55,7 @@ class Employee{
 							break;
 						 case "part_time":
 							System.out.println("Employee is present and is a part time");
-							daily_wage=(wage_per_hr*full_day_hr);
+							daily_wage=(wage_per_hr*half_day_hr);
 							System.out.println("daily_wage="+daily_wage);
 							total_wage=(total_wage+daily_wage);
 							work_hrs=work_hrs+4;
